@@ -44,24 +44,24 @@ but I want to learn what else I can do instead*/
   font-family: 'Yomogi', cursive;
   background-color: purple;
   padding: 10px;
-  margin-left: 15em;
+  margin-left: 15%;
   margin-bottom: -1em;
-  width: 28em;
+  width: 40%;
 }
 
 .math-class {
   font-family: 'Press Start 2P', cursive;
-  
+
   background-color: pink;
-  margin-right: 13em;
+  margin-right: 10%;
   margin-bottom: -1em;
-  width: 34em;
+  width: 50%;
 }
 
 .quote {
   font-family: 'Merienda', cursive;
   background-color: blue;
-  width: 40em;
+  width: 70%;
 }
 
 
