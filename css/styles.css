@@ -18,6 +18,17 @@ main {
   color: white;
 }
 
+.container img {
+  align-items: center;
+  padding: auto;
+  width: 90%;
+}
+
+.container h2 {
+  font-size: 1.8em;
+  text-align: center;
+}
+
 .container h3 {
   font-size: 1.6em;
   text-align: center;
@@ -32,31 +43,6 @@ main {
 /* For now I'm using negative values
 but I want to learn what else I can do instead*/
 
-
-
-.todays-date {
-  font-family: 'Yomogi', cursive;
-  background-color: purple;
-  padding: 10px;
-  margin-left: 15%;
-  margin-bottom: -1em;
-  width: 40%;
-}
-
-.math-class {
-  font-family: 'Press Start 2P', cursive;
-
-  background-color: pink;
-  margin-right: 10%;
-  margin-bottom: -1em;
-  width: 50%;
-}
-
-.quote {
-  font-family: 'Merienda', cursive;
-  background-color: blue;
-  width: 70%;
-}
 
 
 .hide {

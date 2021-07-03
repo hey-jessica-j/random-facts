@@ -29,6 +29,7 @@ const classDictionary = {
     `
     font-family: ${newClass.fonts};
     background-color: ${newClass.color};
+    margin-top: ${newClass.marginValue - 13}%;
     ${newClass.margin}: ${newClass.marginValue}%;
     width: ${newClass.width}%;
     `
@@ -52,7 +53,18 @@ const displayFact = async function(title, fact) {
   containerElement.append(article);
 };
 
-
+const displayImage = async function(title, image) {
+  const style = classDictionary.randomClass();
+  const article = document.createElement("article");
+  article.innerHTML =
+  `
+  <div style="${style}">
+  <h2>${title}</h2>
+  <img src="${image}"/>
+  </div>
+  `;
+  containerElement.append(article);
+};
 
 
 //Takes Todays date and generates a fact about it
@@ -91,6 +103,25 @@ const quoteFact = async function() {
 
 };
 
+const catFact = async function() {
+  const title = "Random cat fact:"
+  const fetchData = await fetch("https://meowfacts.herokuapp.com");
+  const catFactData = await fetchData.json();
+  const catFact = catFactData.data[0];
+  displayFact(title, catFact);
+};
+
+
+const dogImage = async function(){
+  const title = "Look at that face!";
+  const fetchData = await fetch("https://random.dog/woof.json");
+  const dogImgageData = await fetchData.json();
+  const imageSrc = dogImgageData.url;
+  displayImage(title, imageSrc);
+};
+
 dateFact();
 numberFact();
 quoteFact();
+catFact();
+dogImage();
