@@ -19,9 +19,10 @@ main {
 }
 
 .container img {
-  align-items: center;
-  padding: auto;
-  width: 90%;
+  display: block;;
+  margin: auto;
+  padding: 25px;
+  width: 70%;
 }
 
 .container h2 {

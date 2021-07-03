@@ -15,7 +15,8 @@ const classDictionary = {
   marginValue: [10, 11, 11, 11, 12, 12, 13, 14, 15, 20, 20, 20],
   width: [30, 32, 38, 50, 52, 64, 65],
 
-  randomClass: function() {
+
+  createRandomClass: function() {
     const newClass = {};
     const keys = Object.keys(this)
     for (k of keys) {
@@ -24,7 +25,11 @@ const classDictionary = {
       const ranNum = Math.floor(Math.random() * len);
       newClass[k] = this[k][ranNum];
     }
+    return newClass;
+  },
 
+  createFactStyles: function() {
+    const newClass = this.createRandomClass();
     const createdClass =
     `
     font-family: ${newClass.fonts};
@@ -34,6 +39,18 @@ const classDictionary = {
     width: ${newClass.width}%;
     `
     return createdClass;
+  },
+
+  createImageStyles: function() {
+    const newClass = this.createRandomClass();
+    const createdClass =
+    `
+    background-color: ${newClass.color};
+    margin-top: ${newClass.marginValue - 13}%;
+    width: ${newClass.width}%;
+    align-items: center;
+    `
+    return createdClass;
   }
 };
 
@@ -41,7 +58,7 @@ const classDictionary = {
 
 //Display facts function
 const displayFact = async function(title, fact) {
-  const style = classDictionary.randomClass();
+  const style = classDictionary.createFactStyles();
   const article = document.createElement("article");
   article.innerHTML =
     `
@@ -54,7 +71,7 @@ const displayFact = async function(title, fact) {
 };
 
 const displayImage = async function(title, image) {
-  const style = classDictionary.randomClass();
+  const style = classDictionary.createImageStyles();
   const article = document.createElement("article");
   article.innerHTML =
   `
