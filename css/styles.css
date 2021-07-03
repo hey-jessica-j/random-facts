@@ -12,26 +12,30 @@ main {
 
 .container div {
   padding: 2em;
-}
-
-.todays-date,
-.math-class,
-.quote {
+  border-radius: 25%;
   margin: auto;
   align-items: center;
   color: white;
 }
 
-.todays-date h3,
-.math-class h3,
-.quote h3 {
+.container img {
+  display: block;;
+  margin: auto;
+  padding: 25px;
+  width: 70%;
+}
+
+.container h2 {
+  font-size: 1.8em;
+  text-align: center;
+}
+
+.container h3 {
   font-size: 1.6em;
   text-align: center;
 }
 
-.todays-date p,
-.math-class p,
-.quote p {
+.container p {
   font-size: 1.2em;
   text-align: center;
   line-height: 1.6;
@@ -40,29 +44,6 @@ main {
 /* For now I'm using negative values
 but I want to learn what else I can do instead*/
 
-.todays-date {
-  font-family: 'Yomogi', cursive;
-  background-color: purple;
-  padding: 10px;
-  margin-left: 15em;
-  margin-bottom: -1em;
-  width: 28em;
-}
-
-.math-class {
-  font-family: 'Press Start 2P', cursive;
-  
-  background-color: pink;
-  margin-right: 13em;
-  margin-bottom: -1em;
-  width: 34em;
-}
-
-.quote {
-  font-family: 'Merienda', cursive;
-  background-color: blue;
-  width: 40em;
-}
 
 
 .hide {
