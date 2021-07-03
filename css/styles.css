@@ -12,26 +12,18 @@ main {
 
 .container div {
   padding: 2em;
-}
-
-.todays-date,
-.math-class,
-.quote {
+  border-radius: 25%;
   margin: auto;
   align-items: center;
   color: white;
 }
 
-.todays-date h3,
-.math-class h3,
-.quote h3 {
+.container h3 {
   font-size: 1.6em;
   text-align: center;
 }
 
-.todays-date p,
-.math-class p,
-.quote p {
+.container p {
   font-size: 1.2em;
   text-align: center;
   line-height: 1.6;
@@ -39,6 +31,8 @@ main {
 
 /* For now I'm using negative values
 but I want to learn what else I can do instead*/
+
+
 
 .todays-date {
   font-family: 'Yomogi', cursive;
